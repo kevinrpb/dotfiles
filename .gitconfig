@@ -3,9 +3,36 @@
 [user]
 	name = Kevin Romero Peces-Barba
 	email = kevinrpb@hotmail.com
+[core]
+	editor = /Applications/Komet.app/Contents/MacOS/Komet
+[commit]
+	template = /Users/kevin.romero.local/.gitmessage
 [push]
 	default = simple
 [color]
 	ui = auto
-[core]
-	editor = /Applications/Komet.app/Contents/MacOS/Komet
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[alias]
+	co = checkout
+	b = branch
+	s = status
+	c = commit
+	p = "!git pull --ff-only"
+	fixup = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git rebase -i --autostash --autosquash $REV^' -
+	cleanup = "!git branch --merged | grep -v -P '^\\*|master|develop' | xargs -n1 -r git branch -d"
+	children = "!bash -c 'c=${1:-HEAD}; set -- $(git rev-list --all --not \"$c\"^@ --children | grep $(git rev-parse \"$c\") ); shift; echo $1' -"
