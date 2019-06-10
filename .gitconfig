@@ -1,5 +1,5 @@
 [credential]
-	helper = store
+	helper = osxkeychain
 [user]
 	name = Kevin Romero Peces-Barba
 	email = kevinrpb@hotmail.com
