@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ZSH="/Users/kevin.romero.local/.oh-my-zsh"
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/kevs/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
@@ -15,6 +16,7 @@ ZSH_THEME="spaceship"
 # COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd/mm/yyyy"
+VSCODE=code-insiders
 
 plugins=(wd osx git sudo vscode)
 
@@ -71,9 +73,9 @@ SPACESHIP_PROMPT_ORDER=(
 #
 
 # Adds a newline character before each prompt line
-SPACESHIP_PROMPT_ADD_NEWLINE="true"
+SPACESHIP_PROMPT_ADD_NEWLINE="false"
 # Make the prompt span across two lines
-SPACESHIP_PROMPT_SEPARATE_LINE="true"
+SPACESHIP_PROMPT_SEPARATE_LINE="false"
 # Prompt character to be shown before any command
 SPACESHIP_CHAR_SYMBOL="\$ " # ➜
 # Color of prompt character if last command completes successfully
@@ -117,3 +119,4 @@ SPACESHIP_GIT_STATUS_COLOR="blue"
 alias c="clear"
 alias ls='ls -GFh'
 alias lsl="ls -la"
+alias code="code-insiders
