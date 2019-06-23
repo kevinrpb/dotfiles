@@ -4,7 +4,6 @@ alias pip="pip3"
 alias py2="python2"
 alias pip2="pip"
 alias pyserver="python3 -m http.server"
-alias runner="/Applications/CodeRunner.app/Contents/MacOS/CodeRunner"
 
 alias nvmupdate="nvm install node --reinstall-packages-from=node"
 
@@ -121,9 +120,3 @@ export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ls='ls -GFh'
 alias lsl="ls -la"
-
-alias sshcs321="ssh -i ~/.ssh/id_rsa kevinrpb@35.237.115.157"
-alias iber="echo 53DmdcE2"
-alias sshiber="ssh -Y proqual:20SEpt17@172.29.0.17"
-
-export PATH="$HOME/.cargo/bin:$PATH"
