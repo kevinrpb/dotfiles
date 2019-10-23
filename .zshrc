@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kevs/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
@@ -117,6 +117,7 @@ SPACESHIP_GIT_STATUS_COLOR="blue"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c="clear"
-alias ls='ls -GFh'
+alias ls="ls -GFh"
 alias lsl="ls -la"
-alias code="code-insiders
+alias code="code-insiders"
+alias c="clear"
