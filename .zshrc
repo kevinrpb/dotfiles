@@ -3,7 +3,7 @@
 set -o magicequalsubst
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="spaceship"
 
@@ -19,7 +19,15 @@ ZSH_THEME="spaceship"
 HIST_STAMPS="dd/mm/yyyy"
 VSCODE=code-insiders
 
-plugins=(wd osx git sudo vscode)
+plugins=(
+  wd
+  dircycle
+  cp
+  git
+  sudo
+  vscode
+  osx
+)
 
 source $ZSH/oh-my-zsh.sh
 
