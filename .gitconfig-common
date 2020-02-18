@@ -1,10 +1,6 @@
-[credential]
-	helper = osxkeychain
 [user]
 	name = Kevin Romero Peces-Barba
 	email = kevinrpb@hotmail.com
-[core]
-	editor = /Applications/Komet.app/Contents/MacOS/Komet
 [commit]
 	template = /Users/kevin.romero.local/.gitmessage
 [push]
