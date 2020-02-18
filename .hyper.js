@@ -63,6 +63,9 @@ module.exports = {
 		// custom padding (CSS format, i.e.: `top right bottom left`)
 		padding: '12px 14px',
 
+		// window size
+		windowSize: [1280, 720],
+
 		// the full list. if you're going to provide the full color palette,
 		// including the 6 x 6 color cubes and the grayscale map, just provide
 		// an array here instead of a color map object
@@ -100,20 +103,11 @@ module.exports = {
 		hyperTabs: {
 			trafficButtons: false,
 			// border: true,
-			// tabIcons: false,
+			tabIcons: false,
 			tabIconsColored: true,
-			// activityColor: 'salmon',
+			activityColor: 'salmon',
 			// closeAlign: 'right',
-			// activityPulse: false,
-		},
-
-		hypercwd: {
-			initialWorkingDirectory: '~/Documents',
-		},
-
-		hyperPostprocessing: {
-			// defaults to `${HOME}/.hyper-postprocessing.js`
-			entry: '${HOME}/.hyper-postprocessing.js',
+			activityPulse: false,
 		},
 
 		commands: ['clear', 'clear'],
@@ -167,17 +161,14 @@ module.exports = {
 	plugins: [
 		'hyper-sync-settings',
 		'hyper-search',
-		'hypercwd',
 		'hyper-color-command',
 		'hyper-startup',
 		'hyper-alt-click',
 		'hyperterm-safepaste',
 		'hyper-match',
-		// 'hyper-statusline',
 		'hyper-tabs-enhanced',
 		'hyperminimal',
 		'hyper-transparent',
-		'hyper-postprocessing',
 	],
 
 	// in development, you can create a directory under
