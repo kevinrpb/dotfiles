@@ -35,6 +35,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
+export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E\n================'
 
 # Theme configuration
 
@@ -43,7 +44,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 #
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
-  # user          # Username section
+  user          # Username section
   dir           # Current directory section
   # host          # Hostname section
   git           # Git section (git_branch + git_status)
