@@ -1,0 +1,30 @@
+# oh-my-zsh
+antigen use oh-my-zsh
+
+# oh-my-zsh plugins
+antigen bundle cp
+antigen bundle dircycle
+antigen bundle git
+antigen bundle sudo
+antigen bundle vscode
+antigen bundle wd
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    antigen bundle osx
+fi
+
+# other plugins
+antigen bundle chrissicool/zsh-256color
+antigen bundle gretzky/auto-color-ls
+antigen bundle laggardkernel/zsh-thefuck
+antigen bundle supercrabtree/k
+antigen bundle Tarrasch/zsh-bd
+antigen bundle zpm-zsh/clipboard
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# theme
+antigen theme denysdovhan/spaceship-prompt
+
+# apply
+antigen apply

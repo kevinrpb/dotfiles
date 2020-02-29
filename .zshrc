@@ -2,10 +2,12 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 set -o magicequalsubst
 
+source $HOME/dotfiles/.antigenrc
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -19,22 +21,25 @@ ZSH_THEME="spaceship"
 HIST_STAMPS="dd/mm/yyyy"
 VSCODE=code-insiders
 
-plugins=(
-  wd
-  dircycle
-  cp
-  git
-  sudo
-  vscode
-  osx
-)
+#plugins=(
+#  k
+#  wd
+#  dircycle
+#  cp
+#  git
+#  sudo
+#  vscode
+#  osx
+#  zsh-autosuggestions
+#  zsh-syntax-highlighting
+#)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export LANG=en_US.UTF-8
-export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxegedabagacad
+#export CLICOLOR=1
+#export LSCOLORS=gxfxcxdxbxegedabagacad
 export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E\n================'
 
 # Theme configuration
