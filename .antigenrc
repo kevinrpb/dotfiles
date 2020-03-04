@@ -15,7 +15,7 @@ fi
 
 # other plugins
 antigen bundle chrissicool/zsh-256color
-antigen bundle gretzky/auto-color-ls
+#antigen bundle gretzky/auto-color-ls
 antigen bundle laggardkernel/zsh-thefuck
 antigen bundle supercrabtree/k
 antigen bundle Tarrasch/zsh-bd
