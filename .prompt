@@ -38,8 +38,7 @@ SPACESHIP_PROMPT_ORDER=(
 )
 
 SPACESHIP_RPROMPT_ORDER=(
-  # exec_time
-  # time
+  venv
 )
 
 #
