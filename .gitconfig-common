@@ -2,9 +2,17 @@
 	name = Kevin Romero Peces-Barba
 	email = kevinrpb@hotmail.com
 [commit]
-	template = /Users/kevin.romero.local/.gitmessage
+	template = ./.gitmessage
 [push]
 	default = simple
+[diff]
+	tool = vscode-diff
+[difftool "vscode-diff"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode-merge
+[mergetool "vscode-merge"]
+	cmd = code --wait $MERGED
 [color]
 	ui = auto
 	branch = auto

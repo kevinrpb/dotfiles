@@ -2,10 +2,7 @@
 set -o magicequalsubst
 
 # Use antigen to load theme and plugins
-source $HOME/dotfiles/.antigenrc
-
-# Path to oh-my-zsh installation.
-# export ZSH=~/.oh-my-zsh
+source $DOTFILES/.antigenrc
 
 # User configuration
 export LANG=en_US.UTF-8
@@ -15,7 +12,7 @@ HIST_STAMPS="dd/mm/yyyy"
 VSCODE=code-insiders
 
 # Theme & prompt configuration
-source $HOME/dotfiles/.prompt
+source $DOTFILES/.prompt
 
 # Aliases
-source $HOME/dotfiles/.alias
+source $DOTFILES/.alias
