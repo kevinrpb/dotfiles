@@ -1,0 +1,78 @@
+format = """
+$time\
+$battery\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$package\
+$cmake\
+$dotnet\
+$java\
+$kotlin\
+$nodejs\
+$python\
+$swift\
+$memory_usage\
+$env_var\
+$custom\
+$cmd_duration\
+$line_break\
+$jobs\
+$status\
+$character"""
+
+[directory]
+read_only = " "
+truncation_symbol = "…/"
+
+[username]
+show_always = true
+style_user = "red"
+style_root = "bold red"
+
+[hostname]
+ssh_only = true
+
+[git_branch]
+symbol = " "
+style = "bold green"
+
+[java]
+symbol = " "
+style = "bold blue"
+
+[memory_usage]
+symbol = " "
+
+[nodejs]
+symbol = " "
+style = "bold blue"
+
+[package]
+symbol = " "
+style = "bold blue"
+
+[python]
+symbol = " "
+style = "bold blue"
+pyenv_version_name = true
+
+[swift]
+symbol = "ﯣ "
+style = "bold blue"
+
+[line_break]
+disabled = true
+
+[status]
+map_symbol = true
+
+[character]
+symbol = "|>"
+success_symbol = "[|>](bold green)"
+error_symbol = "[<|](bold red)"
