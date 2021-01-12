@@ -1,4 +1,3 @@
-alias c="clear"
 alias ls="ls -GFh"
 alias lsl="ls -la"
 alias code="code-insiders"
