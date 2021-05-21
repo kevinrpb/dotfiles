@@ -73,6 +73,6 @@ disabled = true
 map_symbol = true
 
 [character]
-symbol = "|>"
-success_symbol = "[|>](bold green)"
-error_symbol = "[<|](bold red)"
+format = "|> "
+success_symbol = "[|>](bold green) "
+error_symbol = "[<|](bold red) "
