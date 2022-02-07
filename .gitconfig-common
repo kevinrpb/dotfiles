@@ -36,6 +36,7 @@
 	b = branch
 	s = status
 	c = commit
+	sw = switch
 	p = "!git pull --ff-only"
 	fixup = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git rebase -i --autostash --autosquash $REV^' -
 	cleanup = "!git branch --merged | grep -v -P '^\\*|master|develop' | xargs -n1 -r git branch -d"

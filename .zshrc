@@ -25,7 +25,7 @@ source $DOTFILES/.alias
 # eval "$(starship init zsh)"
 
 # export PYTHONPATH="$HOME/Developer:$PYTHONPATH"
-# eval "$(pyenv init -)"
+# eval "$(pyenv init --path)"
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
