@@ -1,4 +1,4 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
 
 format = """
 [╭╴](fg:magenta)\
@@ -27,7 +27,9 @@ $line_break\
 # [](fg:magenta)\
 # """
 
-palette = 'kevin'
+continuation_prompt = "[∙∙∙·](fg:bright-black) "
+
+palette = "kevin"
 
 [palettes.kevin]
 black = "#2d2a2e"
@@ -44,12 +46,12 @@ symbol = "  "
 
 [character]
 format = "|> "
-success_symbol = '[](bold fg:green)'
-error_symbol = '[](bold fg:red)'
-vimcmd_symbol = '[](bold fg:green)'
-vimcmd_replace_one_symbol = '[](bold fg:magenta)'
-vimcmd_replace_symbol = '[](bold fg:magenta)'
-vimcmd_visual_symbol = '[](bold fg:yellow)'
+success_symbol = "[](bold fg:green)"
+error_symbol = "[](bold fg:red)"
+vimcmd_symbol = "[](bold fg:green)"
+vimcmd_replace_one_symbol = "[](bold fg:magenta)"
+vimcmd_replace_symbol = "[](bold fg:magenta)"
+vimcmd_visual_symbol = "[](bold fg:yellow)"
 
 [directory]
 read_only = " 󰌾"
@@ -60,12 +62,12 @@ format = "[ $path ]($style)"
 
 [git_branch]
 symbol = ""
-style = 'bold fg:white bg:magenta'
-format = '[ $symbol $branch ]($style)'
+style = "bold fg:white bg:magenta"
+format = "[ $symbol $branch ]($style)"
 
 [git_status]
-style = 'fg:white bg:magenta'
-format = '[($all_status$ahead_behind) ]($style)'
+style = "fg:white bg:magenta"
+format = "[($all_status$ahead_behind) ]($style)"
 
 [hostname]
 ssh_symbol = " "
@@ -74,12 +76,12 @@ ssh_only = true
 [java]
 symbol = " "
 style = "fg:black bg:white"
-format = '[ $symbol( $version) ]($style)'
+format = "[ $symbol( $version) ]($style)"
 
 [kotlin]
 symbol = " "
 style = "fg:black bg:white"
-format = '[ $symbol( $version) ]($style)'
+format = "[ $symbol( $version) ]($style)"
 
 [line_break]
 disabled = false
@@ -90,7 +92,7 @@ symbol = "󰍛 "
 [nodejs]
 symbol = " "
 style = "fg:black bg:white"
-format = '[ $symbol( $version) ]($style)'
+format = "[ $symbol( $version) ]($style)"
 
 [os]
 disabled = false
@@ -149,7 +151,7 @@ style = "fg:black bg:white"
 symbol = " "
 pyenv_version_name = true
 style = "fg:black bg:white"
-format = '[ $symbol( $version) ]($style)'
+format = "[ $symbol( $version) ]($style)"
 
 [rust]
 symbol = " "
@@ -162,15 +164,15 @@ style = "fg:black bg:white"
 [swift]
 symbol = " "
 style = "fg:black bg:white"
-format = '[ $symbol( $version) ]($style)'
+format = "[ $symbol( $version) ]($style)"
 
 [time]
 disabled = false
 # time_format = "%R"
-format = '[$time ](fg:white bg:black)'
+format = "[$time ](fg:white bg:black)"
 
 [username]
 show_always = true
 style_user = "fg:white bg:black"
 style_root = "bold fg:white bg:black"
-format = '[$user ]($style)'
+format = "[$user ]($style)"
