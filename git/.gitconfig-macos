@@ -1,6 +1,4 @@
 [include]
 	path = ./.gitconfig-common
-[core]
-	editor = /Applications/Komet.app/Contents/MacOS/Komet
 [credential]
 	helper = osxkeychain

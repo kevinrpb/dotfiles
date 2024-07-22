@@ -10,9 +10,6 @@ export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E
 
 HIST_STAMPS="yyyy-mm-dd"
 
-# vscode
-VSCODE=code-insiders
-
 # Aliases
 source $DOTFILES/.alias
 
@@ -28,6 +25,10 @@ else
 fi
 
 # Load configs
+if [ -f "$DOTFILES/$DOT_SYSTEM.zshrc" ]; then
+  source "$DOTFILES/$DOT_SYSTEM.zshrc"
+fi
+
 for item ($DOT_INCLUDES) {
   BASE=$DOTFILES/config/$item
 
@@ -50,16 +51,17 @@ autoload -Uz compinit && compinit
 # How ~/.zshrc should look like
 # export DOTFILES=$HOME/dotfiles
 # DOT_INCLUDES=(
-#   'flyctl'
-#   'gitconfig'
-#   'miniconda'
 #   'nvm'
 #   'pyenv'
 #   'starship'
 # )
 
-# source $HOME/antigen.zsh
+# export ANTIGEN_DIR=/opt/homebrew/share/antigen
+# source $ANTIGEN_DIR/antigen.zsh
 # source $DOTFILES/.zshrc
+
+# export PATH=$PATH:$HOME/.local/bin
+# export PATH=$PATH:$HOME/.mint/bin
 
 # export PATH="$HOME/.local/bin:$PATH"
 # export NPM_TOKEN=""

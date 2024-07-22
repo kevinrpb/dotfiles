@@ -1,78 +1,176 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
+[╭╴](fg:magenta)\
+[](fg:black)\
 $time\
-$battery\
 $username\
-$hostname\
+[](fg:black bg:blue)\
 $directory\
+[](fg:blue bg:magenta)\
 $git_branch\
-$git_commit\
-$git_state\
 $git_status\
-$docker_context\
-$package\
-$cmake\
-$dotnet\
+[](fg:magenta bg:white)\
+$nodejs\
 $java\
 $kotlin\
-$nodejs\
 $python\
+$rust\
 $swift\
-$memory_usage\
-$env_var\
-$custom\
-$cmd_duration\
+[](fg:white)\
 $line_break\
-$jobs\
-$status\
-$character"""
+[╰─](fg:magenta)$character"""
 
-[directory]
-read_only = " "
-truncation_symbol = "…/"
+# right_format = """
+# [](blue)\
+# [](fg:magenta bg:blue)\
+# [](fg:magenta)\
+# """
 
-[username]
-show_always = true
-style_user = "red"
-style_root = "bold red"
+palette = 'kevin'
 
-[hostname]
-ssh_only = true
+[palettes.kevin]
+black = "#2d2a2e"
+red = "#fd6883"
+green = "#adda78"
+yellow = "#f9cc6c"
+blue = "#9d65ff"
+magenta = "#a8a9eb"
+cyan = "#85dacc"
+white = "#fff1f3"
 
-[git_branch]
-symbol = " "
-style = "bold green"
-
-[java]
-symbol = " "
-style = "bold blue"
-
-[memory_usage]
-symbol = " "
-
-[nodejs]
-symbol = " "
-style = "bold blue"
-
-[package]
-symbol = " "
-style = "bold blue"
-
-[python]
-symbol = " "
-style = "bold blue"
-pyenv_version_name = true
-
-[swift]
-symbol = "ﯣ "
-style = "bold blue"
-
-[line_break]
-disabled = true
-
-[status]
-map_symbol = true
+[aws]
+symbol = "  "
 
 [character]
 format = "|> "
-success_symbol = "[|>](bold green) "
-error_symbol = "[<|](bold red) "
+success_symbol = '[](bold fg:green)'
+error_symbol = '[](bold fg:red)'
+vimcmd_symbol = '[](bold fg:green)'
+vimcmd_replace_one_symbol = '[](bold fg:magenta)'
+vimcmd_replace_symbol = '[](bold fg:magenta)'
+vimcmd_visual_symbol = '[](bold fg:yellow)'
+
+[directory]
+read_only = " 󰌾"
+truncation_length = 5
+truncation_symbol = "…/"
+style = "fg:white bg:blue"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = 'bold fg:white bg:magenta'
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = 'fg:white bg:magenta'
+format = '[($all_status$ahead_behind) ]($style)'
+
+[hostname]
+ssh_symbol = " "
+ssh_only = true
+
+[java]
+symbol = " "
+style = "fg:black bg:white"
+format = '[ $symbol( $version) ]($style)'
+
+[kotlin]
+symbol = " "
+style = "fg:black bg:white"
+format = '[ $symbol( $version) ]($style)'
+
+[line_break]
+disabled = false
+
+[memory_usage]
+symbol = "󰍛 "
+
+[nodejs]
+symbol = " "
+style = "fg:black bg:white"
+format = '[ $symbol( $version) ]($style)'
+
+[os]
+disabled = false
+style = "fg:white bg:black"
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+style = "fg:black bg:white"
+
+[python]
+symbol = " "
+pyenv_version_name = true
+style = "fg:black bg:white"
+format = '[ $symbol( $version) ]($style)'
+
+[rust]
+symbol = " "
+style = "fg:black bg:white"
+
+[scala]
+symbol = " "
+style = "fg:black bg:white"
+
+[swift]
+symbol = " "
+style = "fg:black bg:white"
+format = '[ $symbol( $version) ]($style)'
+
+[time]
+disabled = false
+# time_format = "%R"
+format = '[$time ](fg:white bg:black)'
+
+[username]
+show_always = true
+style_user = "fg:white bg:black"
+style_root = "bold fg:white bg:black"
+format = '[$user ]($style)'
