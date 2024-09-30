@@ -1,0 +1,73 @@
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+# ----- Addons -----
+
+# Autosuggestions
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+zinit ice wait="0a" lucid atload="_zsh_autosuggest_start"
+zinit light zsh-users/zsh-autosuggestions
+
+# zoxide+deps
+zinit ice wait="2" lucid from="gh-r" as="program" \
+  pick="zoxide-*/zoxide -> zoxide" \
+  cp="zoxide-*/completions/_zoxide -> _zoxide" \
+  atclone="./zoxide init zsh > init.zsh" \
+  atpull="%atclone" \
+  src="init.zsh"
+zinit light ajeetdsouza/zoxide
+
+zinit ice from="gh-r" as="command"
+zinit light junegunn/fzf
+
+# Completions
+zinit ice wait="0b" lucid blockf
+zinit light zsh-users/zsh-completions
+
+# Syntax highlight
+zinit ice wait="0c" lucid atinit="zpcompinit;zpcdreplay"
+zinit light zdharma-continuum/fast-syntax-highlighting
+
+# eza
+export EZA_CONFIG_DIR="$DOTFILES/config/eza/"
+
+zinit ice wait="2" lucid from="gh-r" as="program" ver="v0.20.0"
+zinit light eza-community/eza
+zinit ice wait blockf atpull'zinit creinstall -q .'
+
+# bat+extras
+zinit ice from="gh-r" as="program" pick="usr/bin/bat" bpick="*amd64.deb" atload="alias cat=bat"
+zinit light sharkdp/bat
+
+zinit ice lucid wait="1" as="program" pick="src/batgrep.sh"
+zinit ice lucid wait="1" as="program" pick="src/batdiff.sh"
+zinit light eth-p/bat-extras
+alias rg=batgrep.sh
+alias bdiff=batdiff.sh
+alias man=batman.sh
+
+# bd
+zinit ice wait="0b" lucid blockf
+zinit light Tarrasch/zsh-bd
+
+# ----- setup -----
+
+# delete duplicate first
+setopt hist_expire_dups_first

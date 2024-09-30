@@ -5,6 +5,8 @@
 	defaultBranch = main
 [push]
 	default = simple
+[core]
+	editor = micro
 [color]
 	ui = auto
 	branch = auto

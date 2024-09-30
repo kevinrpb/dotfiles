@@ -2,13 +2,16 @@
 set -o magicequalsubst
 
 # Use antigen to load theme and plugins
-source $DOTFILES/.antigenrc
+source $DOTFILES/.zinitrc
 
 # User configuration
 export LANG=en_US.UTF-8
 export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E\n================'
 
 HIST_STAMPS="yyyy-mm-dd"
+HISTSIZE=1000
+SAVEHIST=50000
+HISTFILE=${XDG_STATE_HOME:-$HOME/.local/state}/.zsh_history
 
 # Aliases
 source $DOTFILES/.alias
@@ -56,12 +59,7 @@ autoload -Uz compinit && compinit
 #   'starship'
 # )
 
-# export ANTIGEN_DIR=/opt/homebrew/share/antigen
-# source $ANTIGEN_DIR/antigen.zsh
 # source $DOTFILES/.zshrc
 
 # export PATH=$PATH:$HOME/.local/bin
 # export PATH=$PATH:$HOME/.mint/bin
-
-# export PATH="$HOME/.local/bin:$PATH"
-# export NPM_TOKEN=""
