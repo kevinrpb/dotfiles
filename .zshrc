@@ -7,12 +7,13 @@ source $DOTFILES/.zinitrc
 # User configuration
 export LANG=en_US.UTF-8
 export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E\n================'
+export EDITOR=micro
 
-HIST_STAMPS="yyyy-mm-dd"
-HISTSIZE=1000
-SAVEHIST=50000
-HISTFILE=$HOME/.zsh_history
-setopt appendhistory
+export HIST_STAMPS="yyyy-mm-dd"
+export HISTSIZE=1000
+export SAVEHIST=5000
+export HISTFILE=$HOME/.zsh_history
+setopt SHARE_HISTORY
 
 # Aliases
 source $DOTFILES/.alias
