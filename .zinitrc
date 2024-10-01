@@ -67,6 +67,10 @@ alias man=batman.sh
 zinit ice wait="0b" lucid blockf
 zinit light Tarrasch/zsh-bd
 
+# wd
+zinit ice wait="0b" lucid blockf
+zinit light mfaerevaag/wd
+
 # ----- setup -----
 
 # delete duplicate first

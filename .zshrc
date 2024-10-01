@@ -11,7 +11,8 @@ export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E
 HIST_STAMPS="yyyy-mm-dd"
 HISTSIZE=1000
 SAVEHIST=50000
-HISTFILE=${XDG_STATE_HOME:-$HOME/.local/state}/.zsh_history
+HISTFILE=$HOME/.zsh_history
+setopt appendhistory
 
 # Aliases
 source $DOTFILES/.alias
