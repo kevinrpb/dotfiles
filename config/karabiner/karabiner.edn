@@ -1,0 +1,34 @@
+;; edn spec https://github.com/edn-format/edn
+{
+  :simlayer-thresholjd 300
+  :simlayers {
+    :layer-1 { :key :caps_lock }
+    :layer-2 { :key :quote }
+  }
+
+  :main [
+    {
+      :des "Layer 1 (caps lock) - Navigation and some shortcuts"
+      :rules [
+        :layer-1
+          [:##j :left_arrow]
+          [:##i :up_arrow]
+          [:##l :right_arrow]
+          [:##k :down_arrow]
+          ;
+          [:##o :delete_or_backspace]
+      ]
+    }
+    {
+      :des "Layer 2 (quote) - Accents"
+      :rules [
+        :layer-2
+          [:a [{ :key :e :modi :left_option } :a]]
+          [:e [{ :key :e :modi :left_option } :e]]
+          [:i [{ :key :e :modi :left_option } :i]]
+          [:o [{ :key :e :modi :left_option } :o]]
+          [:u [{ :key :e :modi :left_option } :u]]
+      ]
+    }
+  ]
+}
