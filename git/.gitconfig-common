@@ -38,3 +38,4 @@
 	children = "!bash -c 'c=${1:-HEAD}; set -- $(git rev-list --all --not \"$c\"^@ --children | grep $(git rev-parse \"$c\") ); shift; echo $1' -"
 	amend = !git commit --amend --no-edit
 	reb = !git pull --rebase
+	plog = !git log --all --decorate --oneline --graph
