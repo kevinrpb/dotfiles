@@ -48,7 +48,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 # eza
 export EZA_CONFIG_DIR="$DOTFILES/config/eza/"
 
-zinit ice wait="2" lucid from="gh-r" as="program" ver="v0.20.0"
+zinit ice wait="2" lucid from="gh-r" as="program"
 zinit light eza-community/eza
 zinit ice wait blockf atpull'zinit creinstall -q .'
 
