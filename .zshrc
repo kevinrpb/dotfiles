@@ -25,8 +25,11 @@ elif command -v freebsd-version > /dev/null; then
   DOT_SYSTEM="linux"
 elif command -v apt > /dev/null; then
   DOT_SYSTEM="linux"
+elif command -v yum > /dev/null; then
+  DOT_SYSTEM="linux"
 else
-  echo 'Unknown OS!'
+  echo 'dotfiles: Unknown OS!'
+  return
 fi
 
 # Load configs
