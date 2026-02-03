@@ -67,7 +67,7 @@ zinit light sharkdp/bat
 zinit ice lucid wait="1" as="program" pick="src/batgrep.sh"
 zinit ice lucid wait="1" as="program" pick="src/batdiff.sh"
 zinit light eth-p/bat-extras
-alias rg=batgrep.sh
+alias brg=batgrep.sh
 alias bdiff=batdiff.sh
 alias man=batman.sh
 
