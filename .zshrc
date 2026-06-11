@@ -56,6 +56,11 @@ fi
 
 autoload -Uz compinit && compinit
 
+# Use Ctrl+x Ctrl+e to edit current command in the editor
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+
 # How ~/.zshrc should look like
 # export DOTFILES=$HOME/dotfiles
 # DOT_INCLUDES=(
