@@ -29,8 +29,18 @@ zinit id-as"rust" wait=1 as=null sbin="bin/*" lucid rustup \
   zdharma-continuum/null
 
 # prompt
-zinit ice cargo'!starship'
-zinit load zdharma-continuum/null
+zinit wait lucid as'program' id-as'starship' \
+  has'cargo' \
+  atclone'cargo install starship --locked' \
+  light-mode for \
+  zdharma-continuum/null
+
+# tuckr
+zinit wait lucid as'program' id-as'tuckr' \
+  has'cargo' \
+  atclone'cargo install tuckr' \
+  light-mode for \
+  zdharma-continuum/null
 
 # Autosuggestions
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
