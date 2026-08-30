@@ -7,7 +7,7 @@
 	default = simple
 	autoSetupRemote = true
 [core]
-	editor = micro
+	editor = nano
 [color]
 	ui = auto
 	branch = auto
