@@ -56,8 +56,8 @@ zinit ice wait"0b" lucid from="gh-r" as="program" \
   src="init.zsh"
 zinit light ajeetdsouza/zoxide
 
-zinit ice from="gh-r" as="command" light-mode for \
-  junegunn/fzf
+zinit ice from="gh-r" as="command"
+zinit light junegunn/fzf
 
 # Completions
 zinit ice wait="0c" lucid blockf light-mode for \
@@ -74,8 +74,8 @@ zinit ice as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin"
 zinit light atuinsh/atuin
 
 # eza
-zinit ice wait="2" lucid from="gh-r" as="program" light-mode for \
-  eza-community/eza
+zinit ice wait="2" lucid from="gh-r" as="program"
+zinit light eza-community/eza
 
 # bat+extras
 zinit ice from="gh-r" as="program" pick="usr/bin/bat" bpick="*amd64.deb" atload="alias cat=bat"
