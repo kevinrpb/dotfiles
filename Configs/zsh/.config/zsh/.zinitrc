@@ -29,8 +29,8 @@ zinit id-as"rust" wait=1 as=null sbin="bin/*" lucid rustup \
   zdharma-continuum/null
 
 # prompt
-zinit ice rustup cargo'starship' for \
-  zdharma-continuum/null
+zinit ice cargo'!starship'
+zinit load zdharma-continuum/null
 
 # Autosuggestions
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
@@ -46,15 +46,15 @@ zinit ice wait"0b" lucid from="gh-r" as="program" \
   src="init.zsh"
 zinit light ajeetdsouza/zoxide
 
-zinit ice from="gh-r" as="command"
-zinit light junegunn/fzf
+zinit ice from="gh-r" as="command" light-mode for \
+  junegunn/fzf
 
 # Completions
 zinit ice wait="0c" lucid blockf light-mode for \
   zsh-users/zsh-completions
 
 # Syntax highlight
-zinit ice wait="0d" lucid atinit="zpcompinit;zpcdreplay" light-mode for \
+zinit ice wait="0c" lucid atinit="zpcompinit;zpcdreplay" light-mode for \
   zdharma-continuum/fast-syntax-highlighting
 
 # atuin
@@ -66,7 +66,6 @@ zinit light atuinsh/atuin
 # eza
 zinit ice wait="2" lucid from="gh-r" as="program" light-mode for \
   eza-community/eza
-# zinit ice wait blockf atpull'zinit creinstall -q .'
 
 # bat+extras
 zinit ice from="gh-r" as="program" pick="usr/bin/bat" bpick="*amd64.deb" atload="alias cat=bat"
