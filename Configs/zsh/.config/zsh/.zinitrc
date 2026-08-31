@@ -28,6 +28,8 @@ zinit id-as"rust" wait=1 as=null sbin="bin/*" lucid rustup \
   export CARGO_HOME=\$PWD; export RUSTUP_HOME=\$PWD/rustup" for \
   zdharma-continuum/null
 
+export PATH=$PATH:$CARGO_HOME/bin/
+
 # prompt
 zinit wait lucid as'program' id-as'starship' \
   has'cargo' \
