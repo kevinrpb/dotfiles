@@ -85,6 +85,19 @@ alias man=batman.sh
 zinit ice from="gh-r" as="program" pick="zellij" bpick="zellij-${_ghr_target}.tar.gz"
 zinit light zellij-org/zellij
 
+# mise uses its own naming: macos/linux + arm64/x64, not the Rust triple.
+_mise_arch="$(uname -m)"
+[[ "$_mise_arch" == "x86_64" ]] && _mise_arch="x64"
+[[ "$_mise_arch" == "aarch64" ]] && _mise_arch="arm64"
+if [[ "$OSTYPE" == darwin* ]]; then
+  _mise_target="macos-${_mise_arch}"
+else
+  _mise_target="linux-${_mise_arch}-musl"
+fi
+zinit ice from="gh-r" as="program" pick="mise/bin/mise" bpick="mise-*-${_mise_target}.tar.gz" \
+  atclone="./mise/bin/mise activate zsh > init.zsh" atpull="%atclone" src="init.zsh"
+zinit light jdx/mise
+
 # starship
 zinit ice from="gh-r" as="program" bpick="*${_ghr_target}*.tar.gz" pick="starship" \
   atclone="./starship init zsh > init.zsh" atpull="%atclone" src="init.zsh"
