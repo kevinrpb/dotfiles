@@ -81,6 +81,11 @@ alias brg=batgrep.sh
 alias bdiff=batdiff.sh
 alias man=batman.sh
 
+# starship
+zinit ice from="gh-r" as="program" bpick="*${_ghr_target}*.tar.gz" pick="starship" \
+  atclone="./starship init zsh > init.zsh" atpull="%atclone" src="init.zsh"
+zinit light starship/starship
+
 # bd
 zinit ice wait="0b" lucid blockf
 zinit light Tarrasch/zsh-bd
