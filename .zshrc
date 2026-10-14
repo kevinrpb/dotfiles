@@ -4,9 +4,6 @@ set -o magicequalsubst
 # Use zshinit to load stuff
 source $DOTFILES/.zinitrc
 
-# Setup starship
-eval "$(starship init zsh)"
-
 # User configuration
 export HIST_STAMPS="yyyy-mm-dd"
 export HISTSIZE=1000
