@@ -58,7 +58,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 # atuin
 export ATUIN_CONFIG_DIR="$DOTFILES/config/atuin/"
 
-zinit ice as="command" from="gh-r" bpick="atuin-${_ghr_target}.tar.gz" mv="atuin*/atuin -> atuin" \
+zinit ice wait="2" lucid as="command" from="gh-r" bpick="atuin-${_ghr_target}.tar.gz" mv="atuin*/atuin -> atuin" \
   atclone="./atuin init zsh --disable-up-arrow > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
   atpull="%atclone" src="init.zsh"
 zinit light atuinsh/atuin
