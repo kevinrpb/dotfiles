@@ -10,6 +10,16 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+# Rust release-binary target triple, used with gh-r bpick filters.
+# macOS uname -m reports arm64, but Rust triples use aarch64.
+_ghr_arch="$(uname -m)"
+[[ "$_ghr_arch" == "arm64" ]] && _ghr_arch="aarch64"
+if [[ "$OSTYPE" == darwin* ]]; then
+  _ghr_target="${_ghr_arch}-apple-darwin"
+else
+  _ghr_target="${_ghr_arch}-unknown-linux-musl"
+fi
+
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
@@ -61,7 +71,7 @@ zinit light eza-community/eza
 zinit ice wait blockf atpull'zinit creinstall -q .'
 
 # bat+extras
-zinit ice from="gh-r" as="program" pick="usr/bin/bat" bpick="*amd64.deb" atload="alias cat=bat"
+zinit ice from="gh-r" as="program" pick="bat*/bat" bpick="*${_ghr_target}*.tar.gz" atload="alias cat=bat"
 zinit light sharkdp/bat
 
 zinit ice lucid wait="1" as="program" pick="src/batgrep.sh"
