@@ -7,7 +7,9 @@
 	default = simple
 	autoSetupRemote = true
 [core]
-	editor = micro
+	editor = hx
+[rebase]
+	updateRefs = true
 [color]
 	ui = auto
 	branch = auto

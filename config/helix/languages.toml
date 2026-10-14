@@ -1,0 +1,26 @@
+[[language]]
+name = "java"
+language-servers = [ "jdtls" ]
+#indent = { tab-width = 4, unit = "    " }
+
+[language-server.jdtls]
+command = "jdtls-wrapper"
+args = ["--jvm-arg=-javaagent:/Users/kevinrpb/.lombok/lombok.jar"]
+
+[language-server.jdtls.config]
+java.inlayHints.parameterNames.enabled = "all"
+extendedClientCapabilities.classFileContentsSupport = true
+
+[[language]]
+# Config files
+name = "perl"
+scope = "source.brazil-config"
+file-types = [{glob = "Config"}]
+roots = ["Config"]
+comment-token = "#"
+language-servers = ["barium"]
+grammar = "perl"
+
+
+[language-server.barium]
+command = "barium"
